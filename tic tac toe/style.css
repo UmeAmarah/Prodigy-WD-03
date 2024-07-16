@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color: rgb(6, 81, 76);
+    color: rgb(255, 255, 255);
+    height: 65px;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    text-decoration: underline;
+   padding-left: 35%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+.gameContainer{ 
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    font-family: sans-serif;
+    position: relative;
+    row-gap: 10px;
+    column-gap: 10px;
+   
+}
+
+.box{
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #09a0ae;
+    color: #ffffff;
+    
+}
+
+.box:hover{
+    background-color: rgb(10, 92, 90);
+    color: #eacaca;
+}
+
+.info {
+    font-size: 22px;
+    font-weight: bolder;
+    color: #080d56;
+    
+}
+
+.gameInfo{
+    padding: 0 34px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.gameInfo h1{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 5px;
+    color: #080d56;
+}
+
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+    margin-left: 40%;
+}
+
+.br-0{
+    border-right: 0;
+}
+
+.bl-0{
+    border-left: 0;
+}
+
+.bt-0{
+    border-top: 0;
+}
+
+.bb-0{
+    border-bottom: 0;
+}
+
+#reset {
+    margin: 0 23px;
+    padding: 9px 25px;
+    background: #cfe3e5;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: bolder;
+    justify-content: center;
+    
+}
+#reset:hover{
+    background-color: #09585b;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+.line{
+    background-color: black;
+    height: 3px;
+    width: 0;
+    position: absolute;
+    background-color: #911d91;
+    transition: width 1s ease-in-out;
+}
+
+@media screen and (max-width: 950px)
+{
+    nav{
+        
+        height: 45px;
+        font-size: 20px;
+       padding-left: 30%;
+    }
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 34px;
+    }
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+    .container { 
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+    
+}
